@@ -1,5 +1,3 @@
----
-
 # 🌐 LLM File Translator
 
 **LLM File Translator** is a tool designed to translate `.md` and `.pdf` files using powerful language models (LLMs) through a user-friendly graphical interface. Built with **Tkinter** for an intuitive GUI and powered by **LLM Studio** as the core LLM engine, this project enables easy switching between language models for translation flexibility. Tested with **LLaMA 3** and **LLaMA 2**, LLM File Translator aims to deliver reliable and accurate file translations.
@@ -19,7 +17,8 @@
 ## 📋 Requirements
 
 - **Python 3.8+**
-- **Dependencies**: Specified in `requirements.txt` (install instructions below)
+- **Dependencies**: Specified in `requirements.txt` (installation instructions below)
+- **LLM Studio**: The LLM Studio server must be running with a model loaded and active for API requests to function.
 
 ---
 
@@ -44,12 +43,15 @@
 
 ### LLM Studio Setup
 
-This project uses LLM Studio as the translation backend. To set up:
+This project uses **LLM Studio** as the translation backend. **Make sure to have LLM Studio running with a loaded model and the server activated** to handle translation requests.
 
-1. **Obtain your LLM API Key** or configure the local API server.
-2. In `src/main.py`, ensure `base_url` points to the correct LLM Studio endpoint.
+To set up:
 
-For LLM model switching, refer to the LLM Studio documentation to add or change models according to your needs.
+1. **Load a Model** in LLM Studio according to your translation requirements.
+2. **Activate the API Server** within LLM Studio to make it accessible for translation requests.
+3. In `src/main.py`, ensure `base_url` points to the correct LLM Studio endpoint.
+
+For LLM model switching, refer to the LLM Studio documentation to add or change models as needed.
 
 ---
 
@@ -123,5 +125,3 @@ Contributions are welcome! To contribute:
 ## 📄 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
